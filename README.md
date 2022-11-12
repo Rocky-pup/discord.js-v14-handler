@@ -2,7 +2,7 @@
  Fast handler for everyone!
  
 # setup
- >download repo
+ >download repo \n
  >install deps in both folders(Bot and Bridge) with `npm i`
  >fill in Bot/config/config.json
  >configure bridge in Bridge/index.js
