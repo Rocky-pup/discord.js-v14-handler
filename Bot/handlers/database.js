@@ -17,7 +17,7 @@ module.exports = async (client) => {
             providerOptions: {
               url: config.mongo,
               collection: "settings",
-              dbName: "rockys_handler"
+              dbName: "rocky_handler"
             },
         });
         client.database.settings.defer.then( async () => {
