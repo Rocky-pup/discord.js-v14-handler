@@ -1,0 +1,11 @@
+{
+    "cmds": {
+        "ping": {
+            "variable1": "`Мой пинг \\`${client.ws.ping}\\`мс`"
+        },
+        "language": {        
+            "variable1": "`:white_check_mark: Новый язык: **${languages[lang]}** (\\`${lang}\\`)`",
+            "variable2": "`:white_check_mark: Восстановил язык | The new Language is **🇺🇸 English** (en)`"
+        }
+    }
+}

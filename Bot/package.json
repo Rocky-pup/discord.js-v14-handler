@@ -1,0 +1,22 @@
+{
+  "name": "erry",
+  "version": "3.2.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rocky",
+  "license": "ISC",
+  "dependencies": {
+    "@joshdb/core": "^1.2.7",
+    "@joshdb/mongo": "^1.1.6",
+    "colors": "^1.4.0",
+    "discord-cross-hosting": "^2.3.2",
+    "discord-hybrid-sharding": "^1.7.4",
+    "discord.js": "^14.6.0",
+    "erela.js": "github:Tomato6966/erela.js",
+    "moment": "^2.29.4",
+    "tiny-typed-emitter": "^2.1.0"
+  }
+}

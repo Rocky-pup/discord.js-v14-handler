@@ -1,0 +1,15 @@
+{
+  "name": "bridge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rocky",
+  "license": "ISC",
+  "dependencies": {
+    "discord-cross-hosting": "^2.3.2",
+    "discord-hybrid-sharding": "^1.7.4"
+  }
+}

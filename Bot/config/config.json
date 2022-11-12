@@ -1,0 +1,19 @@
+{
+    "token": "BOT TOKEN",
+    "webhook": "WEBHOOK URI FOR IN-DISCORD LOGS",
+    "embed": {
+        "color": "#25fa6c",
+        "wrongcolor": "#e01e01"
+    },
+    "status": {
+        "activity1": "Listening",
+        "activity2": "Playing",
+        "text": "To Rocky#7890",
+        "text2": "Music",
+        "status": "idle"
+    },
+    "ownerIDS": ["913117505541775420"],
+    "adminguilds": ["961691791776694282"],
+    "botid": "",
+    "mongo": "mongodb://"
+}
