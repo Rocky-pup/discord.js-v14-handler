@@ -8,3 +8,7 @@
  >configure bridge in Bridge/index.js <br />
  >cd to Bridge and start with `node .`, or use pm2 <br />
  >in another console cd to Bot and start with `node .`, or use pm2
+
+
+# VIDEO SETUP
+https://www.youtube.com/watch?v=We9hZgOqu6c
