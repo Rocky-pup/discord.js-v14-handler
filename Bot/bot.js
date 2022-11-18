@@ -2,8 +2,9 @@ const { Shard } = require('discord-cross-hosting');
 const Cluster = require('discord-hybrid-sharding');
 const { Client, GatewayIntentBits, Partials, ActivityType } = require('discord.js');
 const colors = require('colors')
-const config = require("./config/config.json")
+const config = require(`${process.cwd()}/config/config.json`)
 const fs = require('fs')
+const { delay } = require(`${process.cwd()}/handlers/func`)
 
 const client = new Client({
     allowedMentions: {
@@ -46,6 +47,23 @@ const client = new Client({
 });
 
 async function startup(){
+    // handlers
+    var handlers = fs.readdirSync(`${process.cwd()}/handlers`)
+    var required = ["func.js"]
+    await require(`${process.cwd()}/handlers/func`)
+    var something = ["clientvars.js", "database.js"].forEach(async (handler, index) => {
+        required.push(`${handler}`)
+        handler = handler.split(".js").join("")
+        await delay(500*index)
+        await require(`${process.cwd()}/handlers/${handler}`)(client)
+    });
+    await delay(client.ws.ping*2)
+    for (var handler of handlers.filter(file => file.endsWith(".js")).filter(file => !required.includes(file))){
+        required.push(`${handler}`)
+        handler = handler.split(".js").join("")
+        await require(`${process.cwd()}/handlers/${handler}`)(client)
+    }
+
     // Client events
     const allevents = [];
     try {
@@ -68,18 +86,6 @@ async function startup(){
         console.log(String(e.stack).grey.bgRed)
     }
 
-    // handlers
-    var handlers = fs.readdirSync(`${process.cwd()}/handlers`)
-    var required = []
-    var something = ["clientvars"].forEach(async handler => {
-        required.push(`${handler}`)
-        handler = handler.split(".js").join("")
-        await require(`${process.cwd()}/handlers/${handler}`)(client)
-    });
-    for (var handler of handlers.filter(file => file.endsWith(".js")).filter(file => !required.includes(file))){
-        handler = handler.split(".js").join("")
-        await require(`${process.cwd()}/handlers/${handler}`)(client)
-    }
     return true;
 }
 startup()

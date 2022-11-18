@@ -1,13 +1,13 @@
 {
   "name": "bridge",
   "version": "1.0.0",
-  "description": "",
+  "description": "Powerful and quick discord.js v14 slash commands handler with built-in cross-hosting and MongoDB",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rocky",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "discord-cross-hosting": "^2.3.2",
     "discord-hybrid-sharding": "^1.7.4"

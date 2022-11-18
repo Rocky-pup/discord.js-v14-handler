@@ -9,7 +9,7 @@ const server = new Bridge({
     shardsPerCluster: 1, // The amount of Internal Shards, which are in one Cluster
     token: config.token, // Bot Token
 });
-
+console.log("Starting")
 server.on('debug', console.log);
 server.start();
 server.on('ready', url => {

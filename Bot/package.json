@@ -1,13 +1,13 @@
 {
-  "name": "erry",
-  "version": "3.2.0",
-  "description": "",
+  "name": "handler",
+  "version": "1.0.1",
+  "description": "Powerful and quick discord.js v14 slash commands handler with built-in cross-hosting and MongoDB",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rocky",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@joshdb/core": "^1.2.7",
     "@joshdb/mongo": "^1.1.6",
